@@ -1,0 +1,11 @@
+import numpy as np
+dataset = [25, 30, 35, 40, 45, 50, 55, 60, 65, 70]
+mean estimate = np.mean (dataset) 
+print (f"Mean Estimation: (mean estimate)")
+
+variance estimate = np.var (dataset, ddof=1) 
+print (f"Variance Estimation: (variance_estimate)")
+
+sample_size = 5
+random_sample = np.random.choice(dataset, size = sample_size, replace = false)
+print(f"\nRandom sample of size {sample_size}: {random_sample}")
