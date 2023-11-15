@@ -1,0 +1,21 @@
+import pandas as py
+import matplotlib.pyplot as plt
+
+df pd.DataFrame({
+  'car': ['Car1", "Car2", car3", "Car4', 'Cars'], 
+  'mileage': [30000, 45000, 20000, 60000, 35000], 
+  'Price': [20000, 25000, 18000, 30000, 220001, 
+  'horsepower': (150, 200, 120, 250, 180],  
+  'Fuel Efficiency': [25, 20, 30, 18, 22]
+
+plt.figure (figsize=(10, 6))
+plt.scatter (df ['Mileage'], df['Price'], c=df['Horsepower'], cmap='viridis', s=df['Fuel Efficiency']*10, alpha=0.8)
+plt.title('Multivariate Scatterplot')
+plt.xlabel('Mileage")
+plt.ylabel("Price")
+plt.colorbar (label='Horsepower')
+plt.show()
+
+pd.plotting.scatter matrix (df [['Mileage', 'Price', 'Horsepower', 'Fuel Efficiency'11. figsize=(12, 8), diagonal="hist"}
+plt.suptitle('scatter Plot Matrix', y=1.02)
+plt.show()
