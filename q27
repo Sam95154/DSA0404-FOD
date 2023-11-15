@@ -1,0 +1,46 @@
+import numpy as np
+from scipy.stats import t
+import matplotlib.pyplot as plt
+
+sample revenue = np.array([120, 150, 130, 140, 160, 110, 125, 135, 128, 145,
+                           118, 132, 138, 155, 142, 128, 115, 125, 140, 130, 
+                           135, 148, 155, 120, 125, 130, 140, 138, 128, 118,
+                           145, 132, 135, 148, 155, 120, 125, 130, 140, 138,
+                           128, 118, 145, 132, 135, 148, 155, 120, 125, 130,
+                           140, 138, 128, 118, 145, 132, 135, 148, 155, 120, 
+                           125, 130, 140, 138, 128, 118, 145, 132, 135, 148, 
+                           155, 120, 125, 130, 40, 138, 128, 118, 145, 132, 
+                           135, 148, 155, 120, 125, 130, 140, 138, 128, 118, 
+                           145, 132, 135, 148, 1551])
+
+1
+
+confidence_level = 0.95
+
+degrees_of_freedom = len (sample_revenue) - 1
+
+mean_revenue = np.mean(sample_revenue)
+
+std_dev_revenue = np.std(sample_revenue, ddof-1)
+
+std_error = std_dev_revenue / np.sqrt(len(sample_revenue))
+t_value t.ppf((1 + confidence_level) / 2, degrees_of_freedom)
+
+margin_of_error = t_value * std_error
+confidence_interval = (mean_revenue - margin_of_error, mean_revenue + margin_of_error)
+
+print(f"Sample Mean:{mean_revenue}")
+
+print (f"Confidence Interval ({confidence_level * 100}): {confidence_interval}")
+x= np.linspace(mean_revenue - 3 * std_error, mean_revenue + 3 * std_error, 1000)
+y = t.pdf(x, degrees_of_freedom, mean_revenue, std_error)
+
+plt.plot(x, y, label='T-distribution')
+plt.axvline(mean_revenue, color='red', linestyle='dashed', linewidth=2, label='Sample Mean')
+plt.axvline(confidence_interval[0], color='green', linestyle-'dashed', linewidth-2, label='Lower Cr') 
+pit.axvline (confidence_interval(1), color-'green', linestyle='dashed', linewidth=2, label='Upper CI)
+plt.legend()
+plt.title('T-Distribution and Confidence Interval')
+plt.xlabel(Revenge)
+plt.ylabel (Probability Density')
+plt.show()
